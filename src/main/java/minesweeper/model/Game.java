@@ -29,15 +29,5 @@ public class Game {
         this.numbers = new int[height][width];
     }
 
-    public Cell[][] getBoard() {
-        Cell[][] board = new Cell[height][width];
-        for (int y = 0; y < height; y++) {
-            for (int x = 0; x < width; x++) {
-                board[y][x] = new Cell(mines[y][x], open[y][x], numbers[y][x]);
-            }
-        }
-        return board;
-    }
-
     public void complete() { completed = true; }
 }
